@@ -1,0 +1,610 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+/*::-webkit-scrollbar-track {
+    background: #2d2f58;
+}*/
+::-webkit-scrollbar-thumb {
+    background: #d6b5b5;
+}
+
+/*::-webkit-scrollbar-thumb:hover {
+    background: #af2121;
+}*/
+
+
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1400px;
+    padding: 0 60px;
+    margin: auto;
+}
+.about,
+.Project, 
+.skills, 
+.contact, 
+  footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.Project .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(16, 8, 9);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 12px 0;
+    /*background: rgb(94, 2, 50);*/
+    background: linear-gradient(45deg,rgb(179, 45, 128), rgb(34, 14, 167));
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #f7f0ff;
+    font-size: 35px;
+    font-weight: 600;
+    
+}
+.navbar .logo a span{
+    color:rgb(50, 2, 64);
+   
+    transition: all 0.2ss ease;
+}
+.navbar.sticky .logo a span{
+    color: #f6f9f6;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #0a0909;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    display: block;
+    
+}
+.navbar .menu li a:hover{
+    color: rgb(139, 14, 189);
+}
+.navbar.sticky .menu li a:hover{
+    color: #000000;
+}
+
+/* ---------------------MENU BTN------------------ */
+.menu-btn{
+    color: #1e0052;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    background: rgb(180, 20, 220);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    box-shadow: 0px 3px 15px rgba(150, 0, 204, 0.829);
+    height: 45px;
+    width: 42px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 45px;
+    color: #0e0d0d;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+
+/*-----------------------HOME--------------------*/
+
+
+
+.home{
+
+   background: linear-gradient(-70deg, rgb(249, 253, 0) 50%, rgb(50, 234, 21) 30%);
+    display: flex;
+   /*s background: url("image/b.jpg") no-repeat center;*/
+    height: 100vh;
+    color: #f8f5f9;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .left{
+    width: 0%;
+    
+}
+.home .home-content .left .text-1{
+
+    font-size: 35px;
+    margin: 5px 0;
+    color:#f8fbff;
+
+}
+.home .home-content .left .text-2{
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: -3px;
+    color:#00255d;
+   
+}
+.home .home-content .left .text-3{
+    font-size: 35px;
+    margin: 5px 0;
+    color:#f8fbff;
+}
+.home .home-content .left .text-3 span{
+    color:#00255d;
+    font-weight: 700;
+
+}
+
+.home .home-content .left{
+    width: 100%;
+    
+}
+
+.home .home-content .icons a {
+    align-items: center;
+  
+    padding: 0;
+    border-radius: 360px;
+    font-size: 30px;
+    justify-content: space-between;
+    display:flexbox;
+    margin-left: 12%;
+    margin-right: -30px;
+    transition: .3s ease;
+    text-decoration: none;
+
+}
+
+.home .home-content .right{
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    margin-right: 0;
+    display: inline-block;
+    
+}
+
+.home .home-content .right img{
+    /*border-radius:px ;*/
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+
+.home .home-content a{
+    border-radius: 160px;
+    border: 2px solid rgb(52, 49, 78);
+    color: #040303;
+    font-size: 17px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0px 3px 15px rgba(186, 190, 186, 0.9);
+    background: linear-gradient(45deg,rgb(179, 45, 128), rgb(34, 14, 167));
+    font-weight: 200;
+    transition: all 0.3s ease;
+
+}
+
+.home .home-content a:hover{
+    color: rgb(0, 2, 109);
+    background: none;
+    font-weight: 800;
+}
+
+
+
+    
+    
+
+
+
+
+
+
+/*---------------------ABOUT----------------------*/
+
+.about .about-content .left{
+    width: 45%;
+    
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+   
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: rgb(191, 0, 250);;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(173, 20, 220);;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 15px rgba(132, 4, 124, 0.9);
+   
+}
+.about .about-content .right a:hover{
+    color: rgb(7, 4, 5);
+    background: none;
+    font-weight: 800;
+}
+.about, .teams{
+    background: #fffdfd;
+}
+
+/* -----------------------PROJECTS --------------------*/
+
+
+.Project, .teams{
+    color:#fefbfb;
+    background: #0f0c0c;
+   /* background: linear-gradient(45deg,rgb(195, 210, 26), rgb(5, 7, 144));*/
+}
+.Project .title::before,
+.teams .title::before{
+    background: #fcf4f4;
+}
+.Project .title::after,
+.teams .title::after{
+    background: #913838;
+    
+}
+.Project .serv-content .card{
+    width: calc(25% - 20px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border-radius: 12px;
+    padding: 50px 20px;
+    background: #939191;
+    color: #000000;
+   
+}
+.Project .serv-content .card:hover{
+   /* background: linear-gradient(45deg,rgb(176, 119, 150), rgb(5, 7, 144));*/
+    
+    background: linear-gradient(-70deg, #09da09 50%, rgb(198, 215, 69) 30%);
+    box-shadow: 0px 3px 15px rgba(237, 231, 233, 0.9);
+}
+.Project .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.Project .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.Project .serv-content .card i{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+}
+.Project .serv-content .card:hover i{
+    color: #0d0a0a;
+}
+.Project .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/* --------------------------SKILLS----------------------- */
+
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: rgb(173, 20, 220);;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding:  10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(217, 20, 220);
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 15px rgba(203, 53, 191, 0.9);
+}
+.skills .skills-content .left a:hover{
+    color: rgb(10, 7, 8);
+    background: none;
+}
+.skills .skills-content .center .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(167, 56, 79);
+}
+.skills-content .right .html::before{
+    width: 90%;
+}
+.skills-content .right .css::before{
+    width: 60%;
+}
+.skills-content .right .js::before{
+    width: 80%;
+}
+.skills-content .right .Java::before{
+    width: 60%;
+}
+.skills-content .right .php::before{
+    width: 50%;
+}
+.skills-content .right .mysql::before{
+    width: 70%;
+}
+
+
+/*----------------------------------CONTACT-----------------------------*/
+
+
+.contact,.teams{
+    background-color: #000000;
+    color: #fff;
+}
+
+.contact .title::before,
+.teams .title::before{
+    background: #fcf4f4;
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+    
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 40px;
+}
+.contact .contact-content .row i{
+    font-size: 35px;
+    color: rgb(173, 20, 220);
+
+}
+.contact .contact-content .info .head{
+    font-weight: 600;
+}
+.contact .contact-content .info .sub-title{
+    color: #fffefe;
+    
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 30px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(215, 93, 189);
+    border-radius: 25px;
+    outline: none;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 15px rgba(195, 24, 187, 0.9);
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  border: 2px solid rgb(183, 34, 186);
+  transition: all 0.3s ease;
+  box-shadow: 0px 3px 15px rgba(239, 229, 232, 0.4);
+  font-size: 18px;
+  font-weight: 500;
+  flex-wrap: nowrap;
+  background: rgb(173, 20, 220);;
+  
+}
+.right form .button-area button:hover{
+  color: rgb(249, 241, 243);
+  background: none;
+}
+
+
+/*----------------------- FOOTER------------------ */
+
+
+footer{
+   /* background: #111;*/
+    padding: 15px 23px;
+    color: #eac4c4;
+    text-align: center;
+    background: linear-gradient(45deg,rgb(179, 45, 128), rgb(34, 14, 167));
+}
+footer span a{
+    color: rgb(229, 224, 225);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
