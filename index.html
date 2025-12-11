@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankita Gupta | Software Engineer & Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body >
+
+
+<!-- ---------------- NAVBAR ---------------- -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-text">AG</span>
+        </div>
+         
+
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item theme-menu-item">
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </li>
+        </ul>
+        <canvas id="starCursor"></canvas>
+
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+    
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Ankita Gupta</span></h1>
+                <p class="hero-subtitle">Software Engineer | Web Developer | Problem Solver</p>
+                <p class="hero-description">Crafting elegant solutions with Java, Python, and JavaScript. Passionate about building interactive web experiences and solving complex problems.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="https://drive.google.com/file/d/1VUbBO8dSdI5Kywl7nN6ojDkAqYLkawru/view?usp=sharing" 
+                      target="_blank" 
+                      class="btn btn-secondary"> Resume</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="floating-card card-1">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-database"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+    
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">I'm an aspiring software engineer with a Master's degree in Computer Applications (MCA) from Amity University Jharkhand. With a strong foundation in core CS concepts and hands-on experience in web development, I'm passionate about creating user-friendly applications and solving real-world problems through code.</p>
+                    
+                    <p class="about-paragraph">My journey in tech has been exciting—from developing responsive websites to exploring machine learning applications. I believe in continuous learning and staying updated with the latest technologies.</p>
+
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Master of Computer Application (MCA)</h3>
+                                <p class="timeline-subtitle">Amity University Jharkhand</p>
+                                <p class="timeline-date">2022 – 2024 </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Bachelor of Computer Application (BCA)</h3>
+                                <p class="timeline-subtitle">Ranchi Women's College</p>
+                                <p class="timeline-date">2019 – 2022 </p>
+                            </div>
+                        </div>
+                         <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Intermediate</h3>
+                                <p class="timeline-subtitle">Marwari Women's College</p>
+                                <p class="timeline-date">2017 – 2019 </p>
+                            </div>
+                        </div>
+                         <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Matriculation</h3>
+                                <p class="timeline-subtitle">High School Chumba, Ramgarh</p>
+                                <p class="timeline-date">2014 – 2016 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3 class="stat-number">2+</h3>
+                        <p class="stat-label">Years of Learning</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">10+</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">5+</h3>
+                        <p class="stat-label">Technologies</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">5</h3>
+                        <p class="stat-label">Internships</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i> Programming Languages
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Technologies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-globe"></i> Web Technologies
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML & CSS</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Django</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i> Databases
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 84%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">DBMS</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 84%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Concepts -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i> Core Concepts
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Data Structures & Algorithms</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Object-Oriented Programming</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </br>
+                            <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Computer Network</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Methodologies -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i> Tools & Methodologies
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 84%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Agile & SDLC</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-handshake"></i> Soft Skills
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Problem Solving</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Communication</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="ml">ML</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Interior Design Website -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7/Interior_design" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Interior Design Website</h3>
+                    <p class="project-description">A responsive & modern interior design platform with sections like services, shop, testimonials, and admin dashboard.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JS</span>
+                        <span class="tech-tag">ASP.NET</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2024</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7/Interior_design" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7/Interior_design" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sentiment Analysis ML -->
+            <div class="project-card" data-category="ml">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7/Sentiment-Analysis-in-Twitter-Data" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">ML Sentiment Analysis</h3>
+                    <p class="project-description">NLP-based ML model that predicts sentiment from tweets using Python ML libraries.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Sklearn</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2023</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7/Sentiment-Analysis-in-Twitter-Data" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7/Sentiment-Analysis-in-Twitter-Data" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Conferencing Platform -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7/Task-3-Bharat-intern-Video-Conferencing-website" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Video Conferencing App</h3>
+                    <p class="project-description">Browser-based video call platform with real-time streaming & chat using WebRTC.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">WebRTC</span>
+                        <span class="tech-tag">Node</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2023</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7/Task-3-Bharat-intern-Video-Conferencing-website" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7/Task-3-Bharat-intern-Video-Conferencing-website" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini-Mart Ecommerce -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7/Mini-Mart" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Mini-Mart Ecommerce</h3>
+                    <p class="project-description">A small-scale e-commerce site with product listings & shopping features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JS</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2024</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7/Mini-Mart" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7/Mini-Mart" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Currency Converter -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7/Currency-Converter" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Currency Converter</h3>
+                    <p class="project-description">Live currency conversion tool using API integration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">HTML</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2023</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7/Currency-Converter" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7/Currency-Converter" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+         <!-- VIEW MORE BUTTON -->
+        <div class="view-more-container">
+            <a href="https://github.com/Ankitagupta7" target="_blank" class="btn view-more-btn">View More Projects →</a>
+        </div>
+
+    </div>
+
+       
+</section>
+
+
+    <!-- Experience -->
+
+    <section id="experience" class="experience">
+    <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="experience-timeline">
+
+            <!-- Experience 1 -->
+            <div class="experience-item">
+                <div class="experience-marker"></div>
+                <div class="experience-content">
+                    <h3 class="experience-title">Web Development Intern</h3>
+                    <p class="experience-company">TechnoHacks EduTech</p>
+                    <p class="experience-date">July 2023 – August 2023</p>
+                    <ul class="experience-details">
+                        <li>Developed multiple responsive websites using HTML5, CSS3, and JavaScript.</li>
+                        <li>Created projects like Portfolio, Calculator, and Currency Converter.</li>
+                        <li>Enhanced UI/UX using modern front-end development practices.</li>
+                        <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, Front-End Development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="experience-item">
+                <div class="experience-marker"></div>
+                <div class="experience-content">
+                    <h3 class="experience-title">Full Stack Development Intern</h3>
+                    <p class="experience-company">Bharat Intern</p>
+                    <p class="experience-date">July 2023 – August 2023</p>
+                    <ul class="experience-details">
+                        <li>Developed a live Video Conferencing Platform using Node.js, EJS, and WebRTC.</li>
+                        <li>Built a Blogging & Content Management System with full CRUD functionality.</li>
+                        <li>Worked across frontend and backend components.</li>
+                        <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, Node.js, EJS, Full-Stack Development </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hidden Items (View More) -->
+            <div id="more-experience" style="display: none;">
+
+                <!-- Experience 3 -->
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Data Engineering Intern</h3>
+                        <p class="experience-company">366Pi</p>
+                        <p class="experience-date">Jan 2024 – Feb 2024</p>
+                        <ul class="experience-details">
+                            <li>Performed web scraping tasks and processed large data sets.</li>
+                            <li>Worked on data handling using Microsoft SQL Server.</li>
+                            <li>Assisted in structured data extraction workflows.</li>
+                            <li><strong>Skills:</strong> SQL Server, Web Scraping, Python, Data Processing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Intern</h3>
+                        <p class="experience-company">HERE Technologies</p>
+                        <p class="experience-date">Aug 2023 – Nov 2023</p>
+                        <ul class="experience-details">
+                            <li>Worked remotely on projects involving digital mapping and location data.</li>
+                            <li>Collaborated with distributed international teams.</li>
+                            <li>Learned real-time data handling and quality checks.</li>
+                            <li><strong>Skills:</strong> Mapping Tools, Data Verification, Remote Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 5 -->
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Internship Trainee</h3>
+                        <p class="experience-company">NSLCOMP</p>
+                        <p class="experience-date">Sep 2021 – Jan 2022</p>
+                        <ul class="experience-details">
+                            <li>Assisted in front-end development using HTML5, CSS3, and JavaScript.</li>
+                            <li>Handled database operations using Microsoft SQL Server.</li>
+                            <li>Supported real-time software development processes.</li>
+                            <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, MySQL , ASP.NET (Basics), Front-End Development, Backend Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <button id="toggle-btn" class="view-more-btn">View More</button>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Certifications Section -->
+   
+<!-- Certifications Section -->
+<section class="certifications" id="certifications">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="cert-grid">
+
+            <!-- DS Using Java -->
+            <a href="https://drive.google.com/file/d/14M6ObfhGjV3aXgl-7fYa2lpYotazRtyl/view" target="_blank"
+               class="cert-card"
+               data-img="https://drive.google.com/thumbnail?id=14M6ObfhGjV3aXgl-7fYa2lpYotazRtyl">
+                <i class="fas fa-database"></i>
+                <h3>Data Structure using Java</h3>
+                <p>Certification gained through Infosys Springboard Internship</p>
+            </a>
+
+            <!-- Python Using AI -->
+            <a href="https://drive.google.com/file/d/1Jy37DH5H0VSoTQLMtsFqkWARwWWG-ueL/view" target="_blank"
+               class="cert-card"
+               data-img="https://drive.google.com/thumbnail?id=1Jy37DH5H0VSoTQLMtsFqkWARwWWG-ueL">
+                <i class="fas fa-certificate"></i>
+                <h3>Python Using AI</h3>
+                <p>Python for Artificial Intelligence Applications</p>
+            </a>
+
+            <!-- Power BI -->
+            <a href="https://drive.google.com/file/d/1zgj4kC70MEEcZiYkKnbSGRr-3Lynr5G2/view" target="_blank"
+               class="cert-card"
+               data-img="https://drive.google.com/thumbnail?id=1zgj4kC70MEEcZiYkKnbSGRr-3Lynr5G2">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Power BI</h3>
+                <p>Data Visualization & Dashboard Reporting</p>
+            </a>
+
+            <!-- Java Full Stack -->
+            <a href="https://drive.google.com/file/d/11ZHx3LWDYIcd0HA1Z-Huja5SLNZWuTNE/view?usp=sharing"
+               target="_blank"
+               class="cert-card"
+               data-img="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_HERE">
+                <i class="fas fa-code"></i>
+                <h3>Java Full Stack Developer</h3>
+                <p>Simplilearn SkillUp Certification</p>
+            </a>
+
+            <!-- JavaScript (HackerRank) -->
+            <a href="https://drive.google.com/file/d/1m4VyhW0GafESXetNOrrhDl9rfedDW4sJ/view?usp=sharing"
+               target="_blank"
+               class="cert-card"
+               data-img="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_HERE">
+                <i class="fas fa-js-square"></i>
+                <h3>JavaScript (Basic)</h3>
+                <p>HackerRank Skills Certification</p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:ankitagupta7488@gmail.com">ankitagupta7488@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+6207718405">+91 6207718405</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Ranchi, Jharkhand, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ankita-gupta-699363229/" target="_blank" class="social-btn" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Ankitagupta7" target="_blank" class="social-btn" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ankitagupta7488@gmail.com" 
+                         class="social-btn" target="_blank" title="Email">
+                           <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dollyak15/" target="_blank" class="social-btn" title="Instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-message" id="formMessage"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ankita Gupta. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
