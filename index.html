@@ -3,21 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankita Gupta | Software Engineer & Web Developer</title>
+    <title>Ankita Gupta | Generative AI Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ── AI-specific overrides ── */
+        :root {
+            --ai-glow: rgba(33, 128, 141, 0.18);
+            --ai-accent: #21808d;
+        }
+
+        /* Hero AI badge */
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--ai-glow);
+            border: 1px solid var(--color-teal-500);
+            color: var(--color-teal-500);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        /* Hero floating cards — AI icons */
+        .floating-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            box-shadow: 0 8px 32px var(--ai-glow);
+        }
+
+        /* AI skill tags */
+        .ai-tag {
+            display: inline-block;
+            background: var(--ai-glow);
+            border: 1px solid var(--color-teal-500);
+            color: var(--color-teal-500);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin: 3px 2px;
+        }
+
+        /* Skill badge grid (replaces progress bars for AI skills) */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--color-secondary);
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+            font-size: 0.78rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .badge-pill:hover {
+            background: var(--ai-glow);
+            border-color: var(--color-teal-500);
+        }
+        .badge-pill i { color: var(--color-teal-500); font-size: 0.7rem; }
+
+        /* Project badge "AI" label */
+        .project-ai-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-teal-500);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        .project-image { position: relative; }
+
+        /* Highlight color for inline span */
+        .highlight { color: var(--color-teal-500); }
+
+        /* Dark mode support */
+        html.night .badge-pill {
+            background: rgba(33,128,141,0.12);
+        }
+    </style>
 </head>
-<body >
+<body>
 
-
-<!-- ---------------- NAVBAR ---------------- -->
+<!-- ── NAVBAR ── -->
 <nav class="navbar">
     <div class="nav-container">
         <div class="logo">
             <span class="logo-text">AG</span>
         </div>
-         
-
         <ul class="nav-menu">
             <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -26,395 +115,487 @@
             <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             <li class="nav-item theme-menu-item">
-        <button id="themeToggle" class="theme-btn">🌙</button>
-    </li>
+                <button id="themeToggle" class="theme-btn">🌙</button>
+            </li>
         </ul>
         <canvas id="starCursor"></canvas>
-
         <div class="hamburger">
             <span></span><span></span><span></span>
         </div>
     </div>
 </nav>
-    
 
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Ankita Gupta</span></h1>
-                <p class="hero-subtitle">Software Engineer | Web Developer | Problem Solver</p>
-                <p class="hero-description">Crafting elegant solutions with Java, Python, and JavaScript. Passionate about building interactive web experiences and solving complex problems.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    <a href="https://drive.google.com/file/d/1VUbBO8dSdI5Kywl7nN6ojDkAqYLkawru/view?usp=sharing" 
-                      target="_blank" 
-                      class="btn btn-secondary"> Resume</a>
-                </div>
-            </div>
-            <div class="hero-illustration">
-                <div class="floating-card card-1">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-database"></i>
-                </div>
+<!-- ── HERO ── -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="ai-badge"><i class="fas fa-robot"></i> Generative AI Developer</div>
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Ankita Gupta</span></h1>
+            <p class="hero-subtitle">Ai Engineer · Python · LLM · RAG · LangChain · FastAPI</p>
+            <p class="hero-description">
+                MCA graduate passionate about building AI-powered applications. 
+                I develop RAG pipelines, LLM integrations, and intelligent chatbots — 
+                turning complex AI concepts into real-world solutions.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="https://drive.google.com/file/d/1VUbBO8dSdI5Kywl7nN6ojDkAqYLkawru/view?usp=sharing"
+                   target="_blank" class="btn btn-secondary">Resume</a>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="mouse"></div>
+        <div class="hero-illustration">
+            <div class="floating-card card-1"><i class="fas fa-robot"></i></div>
+            <div class="floating-card card-2"><i class="fas fa-brain"></i></div>
+            <div class="floating-card card-3"><i class="fas fa-network-wired"></i></div>
         </div>
-    </section>
-    
+    </div>
+    <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="mouse"></div>
+    </div>
+</section>
 
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-paragraph">I'm an aspiring software engineer with a Master's degree in Computer Applications (MCA) from Amity University Jharkhand. With a strong foundation in core CS concepts and hands-on experience in web development, I'm passionate about creating user-friendly applications and solving real-world problems through code.</p>
-                    
-                    <p class="about-paragraph">My journey in tech has been exciting—from developing responsive websites to exploring machine learning applications. I believe in continuous learning and staying updated with the latest technologies.</p>
+<!-- ── ABOUT ── -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-paragraph">
+                    I'm a <strong>Generative AI Developer</strong> and MCA graduate from Amity University with hands-on experience in Python, LLMs, RAG architectures, and REST APIs. My focus is building AI-powered applications that solve real problems — from intelligent document chatbots to sentiment analysis pipelines.
+                </p>
+                <p class="about-paragraph">
+                    I've worked with <strong>LangChain, FastAPI, FAISS, OpenAI API, and Gemini API</strong> to build end-to-end GenAI pipelines. I'm passionate about prompt engineering, embedding models, and making LLMs practical and useful. I'm actively seeking entry-level Generative AI / Python Developer roles.
+                </p>
 
-                    <div class="education-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h3>Master of Computer Application (MCA)</h3>
-                                <p class="timeline-subtitle">Amity University Jharkhand</p>
-                                <p class="timeline-date">2022 – 2024 </p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h3>Bachelor of Computer Application (BCA)</h3>
-                                <p class="timeline-subtitle">Ranchi Women's College</p>
-                                <p class="timeline-date">2019 – 2022 </p>
-                            </div>
-                        </div>
-                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h3>Intermediate</h3>
-                                <p class="timeline-subtitle">Marwari Women's College</p>
-                                <p class="timeline-date">2017 – 2019 </p>
-                            </div>
-                        </div>
-                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h3>Matriculation</h3>
-                                <p class="timeline-subtitle">High School Chumba, Ramgarh</p>
-                                <p class="timeline-date">2014 – 2016 </p>
-                            </div>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Master of Computer Application (MCA)</h3>
+                            <p class="timeline-subtitle">Amity University, Ranchi — CGPA: 8.55/10</p>
+                            <p class="timeline-date">2022 – 2024</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3 class="stat-number">2+</h3>
-                        <p class="stat-label">Years of Learning</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 class="stat-number">10+</h3>
-                        <p class="stat-label">Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 class="stat-number">5+</h3>
-                        <p class="stat-label">Technologies</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 class="stat-number">5</h3>
-                        <p class="stat-label">Internships</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-code"></i> Programming Languages
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
-                            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Computer Application (BCA)</h3>
+                            <p class="timeline-subtitle">Ranchi Women's College</p>
+                            <p class="timeline-date">2019 – 2022</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Web Technologies -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-globe"></i> Web Technologies
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">HTML & CSS</span>
-                                <span class="skill-level">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">React</span>
-                                <span class="skill-level">Intermediate</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Responsive Design</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Databases -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-database"></i> Databases
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">MySQL</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 84%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">DBMS</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 84%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Core Concepts -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-brain"></i> Core Concepts
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Data Structures & Algorithms</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 86%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Object-Oriented Programming</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </br>
-                            <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Computer Network</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 86%"></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools & Methodologies -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-tools"></i> Tools & Methodologies
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Git & GitHub</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 84%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Agile & SDLC</span>
-                                <span class="skill-level">Intermediate</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 78%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-handshake"></i> Soft Skills
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Problem Solving</span>
-                                <span class="skill-level">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Communication</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Intermediate</h3>
+                            <p class="timeline-subtitle">Marwari Women's College</p>
+                            <p class="timeline-date">2017 – 2019</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
+            <div class="about-stats">
+                <div class="stat-card">
+                    <h3 class="stat-number">2+</h3>
+                    <p class="stat-label">Years Learning AI/ML</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">5+</h3>
+                    <p class="stat-label">AI Projects Built</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">5+</h3>
+                    <p class="stat-label">Internships</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">4</h3>
+                    <p class="stat-label">Certifications</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ── SKILLS ── -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <style>
+            /* ── Compact skill table layout ── */
+            .skill-table-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+                gap: 24px;
+            }
+            .skill-block {
+                background: var(--color-surface);
+                border: 1px solid var(--color-card-border);
+                border-radius: 14px;
+                padding: 22px 24px;
+            }
+            .skill-block-title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.85rem;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: var(--color-teal-500);
+                margin-bottom: 16px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid var(--color-border);
+            }
+            .skill-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 7px 0;
+                border-bottom: 1px solid rgba(0,0,0,0.04);
+            }
+            .skill-row:last-child { border-bottom: none; }
+            .skill-row-name {
+                font-size: 0.88rem;
+                color: var(--color-text);
+                font-weight: 500;
+            }
+            .skill-dots {
+                display: flex;
+                gap: 5px;
+            }
+            .dot {
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: var(--color-border);
+            }
+            .dot.filled { background: var(--color-teal-500); }
+            /* level labels */
+            .lvl-expert   .dot.filled { background: #21808d; }
+            .lvl-advanced .dot.filled { background: #2db6c6; }
+            .lvl-mid      .dot.filled { background: #5ecfda; }
+            .lvl-basic    .dot.filled { background: #9ee3ea; }
+        </style>
+
+        <div class="skill-table-grid">
+
+            <!-- 1. Generative AI & LLMs -->
+            <div class="skill-block">
+                <div class="skill-block-title"><i class="fas fa-robot"></i> Generative AI & LLMs</div>
+                <div class="skill-row lvl-expert">
+                    <span class="skill-row-name">Large Language Models (LLMs)</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-expert">
+                    <span class="skill-row-name">RAG (Retrieval-Augmented Generation)</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">Prompt Engineering</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">Embeddings & Vector Search</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">AI Chatbot Development</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">Document Processing & Chunking</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Python & Frameworks -->
+            <div class="skill-block">
+                <div class="skill-block-title"><i class="fas fa-layer-group"></i> Python & Frameworks</div>
+                <div class="skill-row lvl-expert">
+                    <span class="skill-row-name">Python</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">LangChain</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">FastAPI</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">Pandas</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">Scikit-learn</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">BeautifulSoup / Requests</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. AI APIs & Vector DBs -->
+            <div class="skill-block">
+                <div class="skill-block-title"><i class="fas fa-plug"></i> AI APIs & Vector DBs</div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">OpenAI API</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">Gemini API</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">FAISS Vector Database</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">REST APIs</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">NLP (TF-IDF, Text Cleaning)</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">SQL</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Tools & Others -->
+            <div class="skill-block">
+                <div class="skill-block-title"><i class="fas fa-tools"></i> Tools & Others</div>
+                <div class="skill-row lvl-advanced">
+                    <span class="skill-row-name">Git & GitHub</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">VS Code / Postman</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">Power BI</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-mid">
+                    <span class="skill-row-name">HTML & CSS</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-basic">
+                    <span class="skill-row-name">JavaScript</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+                <div class="skill-row lvl-basic">
+                    <span class="skill-row-name">OOP · DSA · DBMS · OS</span>
+                    <div class="skill-dots">
+                        <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Proficiency legend -->
+        <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;justify-content:center;font-size:0.75rem;color:var(--color-text-secondary);">
+            <span>●●●●● Expert</span>
+            <span style="color:#2db6c6">●●●●○ Advanced</span>
+            <span style="color:#5ecfda">●●●○○ Intermediate</span>
+            <span style="color:#9ee3ea">●●○○○ Basic</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ── PROJECTS ── -->
 <section id="projects" class="projects">
     <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Projects</h2>
 
-        <!-- Filter Buttons -->
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="ml">ML</button>
+            <button class="filter-btn" data-filter="ai">AI / GenAI</button>
+            <button class="filter-btn" data-filter="ml">ML / NLP</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
         </div>
 
         <div class="projects-grid">
 
-            <!-- Interior Design Website -->
-            <div class="project-card" data-category="web">
+            <!-- Project 1: AI Document Chatbot (RAG) — FEATURED -->
+            <div class="project-card" data-category="ai">
                 <div class="project-image">
                     <div class="project-overlay">
-                        <a href="https://github.com/Ankitagupta7/Interior_design" target="_blank" class="project-link">View Details</a>
+                        <a href="https://github.com/Ankitagupta7" target="_blank" class="project-link">View Details</a>
                     </div>
-                    <i class="fas fa-paint-brush"></i>
+                    <div class="project-ai-label">🤖 GenAI</div>
+                    <i class="fas fa-comments"></i>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Interior Design Website</h3>
-                    <p class="project-description">A responsive & modern interior design platform with sections like services, shop, testimonials, and admin dashboard.</p>
+                    <h3 class="project-title">AI Document Chatbot (RAG)</h3>
+                    <p class="project-description">
+                        GenAI chatbot that answers questions from uploaded documents using Retrieval-Augmented Generation. 
+                        Implements document loading, text splitting, FAISS vector search, and LLM response generation — 
+                        all wired together with LangChain into an end-to-end pipeline.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JS</span>
-                        <span class="tech-tag">ASP.NET</span>
-                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">LLM API</span>
                     </div>
-                    <div class="project-meta"><span class="project-date">2024</span></div>
+                    <div class="project-meta"><span class="project-date">Aug 2026 – Ongoing</span></div>
                     <div class="project-buttons">
-                        <a href="https://github.com/Ankitagupta7/Interior_design" class="btn-small btn-primary-small" target="_blank">View Project</a>
-                        <a href="https://github.com/Ankitagupta7/Interior_design" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Sentiment Analysis ML -->
+            <!-- Project 2: Sentiment Analysis ML -->
             <div class="project-card" data-category="ml">
                 <div class="project-image">
                     <div class="project-overlay">
-                        <a href="https://github.com/Ankitagupta7/Sentiment-Analysis-in-Twitter-Data" target="_blank" class="project-link">View Details</a>
+                        <a href="https://github.com/Ankitagupta7" target="_blank" class="project-link">View Details</a>
                     </div>
+                    <div class="project-ai-label">📊 ML / NLP</div>
                     <i class="fas fa-chart-bar"></i>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">ML Sentiment Analysis</h3>
-                    <p class="project-description">NLP-based ML model that predicts sentiment from tweets using Python ML libraries.</p>
+                    <h3 class="project-title">ML-Based Sentiment Analysis</h3>
+                    <p class="project-description">
+                        End-to-end NLP pipeline on 10,000+ tweets: text cleaning → TF-IDF → Naive Bayes &amp; Logistic Regression.
+                        Evaluated with accuracy, precision, and recall. Applied feature engineering to compare classifier performance.
+                    </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Sklearn</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">TF-IDF</span>
                     </div>
-                    <div class="project-meta"><span class="project-date">2023</span></div>
+                    <div class="project-meta"><span class="project-date">Aug – Oct 2025</span></div>
                     <div class="project-buttons">
-                        <a href="https://github.com/Ankitagupta7/Sentiment-Analysis-in-Twitter-Data" class="btn-small btn-primary-small" target="_blank">View Project</a>
-                        <a href="https://github.com/Ankitagupta7/Sentiment-Analysis-in-Twitter-Data" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Video Conferencing Platform -->
+            <!-- Project 3: Weather App (REST API) -->
+            <div class="project-card" data-category="ai">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Real-Time Weather App</h3>
+                    <p class="project-description">
+                        Python app consuming a live REST API to fetch real-time weather data. 
+                        Built with clean, modular Python code, input validation, and error handling.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Requests</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2024</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Web Scraper -->
+            <div class="project-card" data-category="ml">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Ankitagupta7" target="_blank" class="project-link">View Details</a>
+                    </div>
+                    <i class="fas fa-spider"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Automated Web Scraper</h3>
+                    <p class="project-description">
+                        Scraped 500+ records from 10+ websites using BeautifulSoup and Requests. 
+                        Automated data collection, cleaning, and export to CSV for downstream analysis.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">BeautifulSoup</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">CSV</span>
+                    </div>
+                    <div class="project-meta"><span class="project-date">2024</span></div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-primary-small" target="_blank">View Project</a>
+                        <a href="https://github.com/Ankitagupta7" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Video Conferencing -->
             <div class="project-card" data-category="web">
                 <div class="project-image">
                     <div class="project-overlay">
@@ -424,11 +605,11 @@
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Video Conferencing App</h3>
-                    <p class="project-description">Browser-based video call platform with real-time streaming & chat using WebRTC.</p>
+                    <p class="project-description">Browser-based video call platform with real-time streaming &amp; chat using WebRTC.</p>
                     <div class="project-tech">
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">WebRTC</span>
-                        <span class="tech-tag">Node</span>
+                        <span class="tech-tag">Node.js</span>
                     </div>
                     <div class="project-meta"><span class="project-date">2023</span></div>
                     <div class="project-buttons">
@@ -438,7 +619,7 @@
                 </div>
             </div>
 
-            <!-- Mini-Mart Ecommerce -->
+            <!-- Project 6: Mini-Mart -->
             <div class="project-card" data-category="web">
                 <div class="project-image">
                     <div class="project-overlay">
@@ -448,11 +629,11 @@
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Mini-Mart Ecommerce</h3>
-                    <p class="project-description">A small-scale e-commerce site with product listings & shopping features.</p>
+                    <p class="project-description">A small-scale e-commerce site with product listings &amp; shopping features.</p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JS</span>
+                        <span class="tech-tag">JavaScript</span>
                     </div>
                     <div class="project-meta"><span class="project-date">2024</span></div>
                     <div class="project-buttons">
@@ -462,287 +643,247 @@
                 </div>
             </div>
 
-            <!-- Currency Converter -->
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="https://github.com/Ankitagupta7/Currency-Converter" target="_blank" class="project-link">View Details</a>
-                    </div>
-                    <i class="fas fa-coins"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Currency Converter</h3>
-                    <p class="project-description">Live currency conversion tool using API integration.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">API</span>
-                        <span class="tech-tag">HTML</span>
-                    </div>
-                    <div class="project-meta"><span class="project-date">2023</span></div>
-                    <div class="project-buttons">
-                        <a href="https://github.com/Ankitagupta7/Currency-Converter" class="btn-small btn-primary-small" target="_blank">View Project</a>
-                        <a href="https://github.com/Ankitagupta7/Currency-Converter" class="btn-small btn-secondary-small" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            
-
         </div>
-         <!-- VIEW MORE BUTTON -->
+
         <div class="view-more-container">
-            <a href="https://github.com/Ankitagupta7" target="_blank" class="btn view-more-btn">View More Projects →</a>
+            <a href="https://github.com/Ankitagupta7" target="_blank" class="btn view-more-btn">View More on GitHub →</a>
         </div>
-
     </div>
-
-       
 </section>
 
 
-    <!-- Experience -->
-
-    <section id="experience" class="experience">
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="experience">
     <div class="container">
         <h2 class="section-title">Work Experience</h2>
-
         <div class="experience-timeline">
 
-            <!-- Experience 1 -->
+            <!-- Experience 1: Synent (Python / AI Dev) -->
             <div class="experience-item">
                 <div class="experience-marker"></div>
                 <div class="experience-content">
-                    <h3 class="experience-title">Web Development Intern</h3>
-                    <p class="experience-company">TechnoHacks EduTech</p>
-                    <p class="experience-date">July 2023 – August 2023</p>
+                    <h3 class="experience-title">Python Developer Intern</h3>
+                    <p class="experience-company">Synent Technologies — Remote</p>
+                    <p class="experience-date">2024</p>
                     <ul class="experience-details">
-                        <li>Developed multiple responsive websites using HTML5, CSS3, and JavaScript.</li>
-                        <li>Created projects like Portfolio, Calculator, and Currency Converter.</li>
-                        <li>Enhanced UI/UX using modern front-end development practices.</li>
-                        <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, Front-End Development</li>
+                        <li>Built a real-time Weather App in Python using REST API integration.</li>
+                        <li>Developed a Web Scraper with BeautifulSoup and Requests — collected 500+ records from 10+ websites.</li>
+                        <li>Exported structured data to CSV files; applied input validation and error handling throughout.</li>
+                        <li>Used GitHub for project documentation and version control.</li>
+                        <li><strong>Skills:</strong> Python, REST API, BeautifulSoup, Requests, Git, GitHub</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Experience 2 -->
+            <!-- Experience 2: 366Pi -->
             <div class="experience-item">
                 <div class="experience-marker"></div>
                 <div class="experience-content">
-                    <h3 class="experience-title">Full Stack Development Intern</h3>
-                    <p class="experience-company">Bharat Intern</p>
-                    <p class="experience-date">July 2023 – August 2023</p>
+                    <h3 class="experience-title">Python Developer Intern (Data Engineering)</h3>
+                    <p class="experience-company">366Pi — Ranchi</p>
+                    <p class="experience-date">Jan 2024 – Feb 2024</p>
                     <ul class="experience-details">
-                        <li>Developed a live Video Conferencing Platform using Node.js, EJS, and WebRTC.</li>
-                        <li>Built a Blogging & Content Management System with full CRUD functionality.</li>
-                        <li>Worked across frontend and backend components.</li>
-                        <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, Node.js, EJS, Full-Stack Development </li>
+                        <li>Developed Python-based web scraping solutions using Requests, BeautifulSoup, and Pandas.</li>
+                        <li>Extracted and processed structured data from websites and APIs.</li>
+                        <li>Cleaned and organised datasets into CSV files; automated data collection workflows.</li>
+                        <li><strong>Skills:</strong> Python, BeautifulSoup, Pandas, SQL Server, Data Processing</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Hidden Items (View More) -->
+            <!-- Hidden items -->
             <div id="more-experience" style="display: none;">
 
-                <!-- Experience 3 -->
+                <!-- Experience 3: HERE Technologies -->
                 <div class="experience-item">
                     <div class="experience-marker"></div>
                     <div class="experience-content">
-                        <h3 class="experience-title">Data Engineering Intern</h3>
-                        <p class="experience-company">366Pi</p>
-                        <p class="experience-date">Jan 2024 – Feb 2024</p>
-                        <ul class="experience-details">
-                            <li>Performed web scraping tasks and processed large data sets.</li>
-                            <li>Worked on data handling using Microsoft SQL Server.</li>
-                            <li>Assisted in structured data extraction workflows.</li>
-                            <li><strong>Skills:</strong> SQL Server, Web Scraping, Python, Data Processing</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 4 -->
-                <div class="experience-item">
-                    <div class="experience-marker"></div>
-                    <div class="experience-content">
-                        <h3 class="experience-title">Intern</h3>
-                        <p class="experience-company">HERE Technologies</p>
+                        <h3 class="experience-title">Data Acquisition Intern</h3>
+                        <p class="experience-company">HERE Technologies — Remote</p>
                         <p class="experience-date">Aug 2023 – Nov 2023</p>
                         <ul class="experience-details">
-                            <li>Worked remotely on projects involving digital mapping and location data.</li>
-                            <li>Collaborated with distributed international teams.</li>
-                            <li>Learned real-time data handling and quality checks.</li>
+                            <li>Contributed to map data quality and digital mapping projects.</li>
+                            <li>Recognised with a <strong>Contributor Award</strong> by Senior Data Acquisition Analyst.</li>
+                            <li>Collaborated with distributed international teams on real-time data quality checks.</li>
                             <li><strong>Skills:</strong> Mapping Tools, Data Verification, Remote Collaboration</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Experience 5 -->
+                <!-- Experience 4: Bharat Intern -->
                 <div class="experience-item">
                     <div class="experience-marker"></div>
                     <div class="experience-content">
-                        <h3 class="experience-title">Internship Trainee</h3>
-                        <p class="experience-company">NSLCOMP</p>
-                        <p class="experience-date">Sep 2021 – Jan 2022</p>
+                        <h3 class="experience-title">Full Stack Development Intern</h3>
+                        <p class="experience-company">Bharat Intern</p>
+                        <p class="experience-date">July 2023 – August 2023</p>
                         <ul class="experience-details">
-                            <li>Assisted in front-end development using HTML5, CSS3, and JavaScript.</li>
-                            <li>Handled database operations using Microsoft SQL Server.</li>
-                            <li>Supported real-time software development processes.</li>
-                            <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, MySQL , ASP.NET (Basics), Front-End Development, Backend Development</li>
+                            <li>Developed a live Video Conferencing Platform using Node.js, EJS, and WebRTC.</li>
+                            <li>Built a Blogging & Content Management System with full CRUD functionality.</li>
+                            <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, Node.js, EJS, Full-Stack Development</li>
                         </ul>
                     </div>
                 </div>
 
-            </div>
+                <!-- Experience 5: TechnoHacks -->
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Web Development Intern</h3>
+                        <p class="experience-company">TechnoHacks EduTech</p>
+                        <p class="experience-date">July 2023 – August 2023</p>
+                        <ul class="experience-details">
+                            <li>Developed multiple responsive websites using HTML5, CSS3, and JavaScript.</li>
+                            <li>Created projects like Portfolio, Calculator, and Currency Converter.</li>
+                            <li><strong>Skills:</strong> HTML5, CSS3, JavaScript, Front-End Development</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <button id="toggle-btn" class="view-more-btn">View More</button>
-
+            </div><!-- /more-experience -->
         </div>
+
+        <button id="toggle-btn" class="view-more-btn">View More</button>
     </div>
 </section>
 
-    <!-- Certifications Section -->
-   
-<!-- Certifications Section -->
+
+<!-- ── ACHIEVEMENTS ── -->
 <section class="certifications" id="certifications">
     <div class="container">
-        <h2 class="section-title">Certifications</h2>
+        <h2 class="section-title">Achievements & Certifications</h2>
 
         <div class="cert-grid">
 
-            <!-- DS Using Java -->
-            <a href="https://drive.google.com/file/d/14M6ObfhGjV3aXgl-7fYa2lpYotazRtyl/view" target="_blank"
-               class="cert-card"
-               data-img="https://drive.google.com/thumbnail?id=14M6ObfhGjV3aXgl-7fYa2lpYotazRtyl">
+            <!-- Achievement: HERE Technologies -->
+            <div class="cert-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Contributor Award</h3>
+                <p>Recognised by Senior Data Acquisition Analyst — HERE Technologies, 2024</p>
+            </div>
+
+            <!-- Achievement: SIH -->
+            <div class="cert-card">
+                <i class="fas fa-medal"></i>
+                <h3>Smart India Hackathon 2023</h3>
+                <p>Competed in SIH Internal Hackathon (Software category) — Amity University</p>
+            </div>
+
+            <!-- SQL HackerRank -->
+            <a href="https://www.hackerrank.com/certificates/" target="_blank" class="cert-card">
                 <i class="fas fa-database"></i>
-                <h3>Data Structure using Java</h3>
-                <p>Certification gained through Infosys Springboard Internship</p>
+                <h3>SQL (Basic)</h3>
+                <p>HackerRank Skills Certification</p>
             </a>
 
-            <!-- Python Using AI -->
-            <a href="https://drive.google.com/file/d/1Jy37DH5H0VSoTQLMtsFqkWARwWWG-ueL/view" target="_blank"
-               class="cert-card"
-               data-img="https://drive.google.com/thumbnail?id=1Jy37DH5H0VSoTQLMtsFqkWARwWWG-ueL">
-                <i class="fas fa-certificate"></i>
-                <h3>Python Using AI</h3>
-                <p>Python for Artificial Intelligence Applications</p>
-            </a>
-
-            <!-- Power BI -->
-            <a href="https://drive.google.com/file/d/1zgj4kC70MEEcZiYkKnbSGRr-3Lynr5G2/view" target="_blank"
-               class="cert-card"
-               data-img="https://drive.google.com/thumbnail?id=1zgj4kC70MEEcZiYkKnbSGRr-3Lynr5G2">
-                <i class="fas fa-chart-pie"></i>
-                <h3>Power BI</h3>
-                <p>Data Visualization & Dashboard Reporting</p>
-            </a>
-
-            <!-- Java Full Stack -->
-            <a href="https://drive.google.com/file/d/11ZHx3LWDYIcd0HA1Z-Huja5SLNZWuTNE/view?usp=sharing"
-               target="_blank"
-               class="cert-card"
-               data-img="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_HERE">
-                <i class="fas fa-code"></i>
-                <h3>Java Full Stack Developer</h3>
-                <p>Simplilearn SkillUp Certification</p>
-            </a>
-
-            <!-- JavaScript (HackerRank) -->
+            <!-- JS HackerRank -->
             <a href="https://drive.google.com/file/d/1m4VyhW0GafESXetNOrrhDl9rfedDW4sJ/view?usp=sharing"
-               target="_blank"
-               class="cert-card"
-               data-img="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_HERE">
+               target="_blank" class="cert-card">
                 <i class="fas fa-js-square"></i>
                 <h3>JavaScript (Basic)</h3>
                 <p>HackerRank Skills Certification</p>
             </a>
 
+            <!-- Power BI -->
+            <a href="https://drive.google.com/file/d/1zgj4kC70MEEcZiYkKnbSGRr-3Lynr5G2/view" target="_blank"
+               class="cert-card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>AI Dashboards — Power BI</h3>
+                <p>Microsoft — Data Visualization & AI Dashboards</p>
+            </a>
+
+            <!-- Python Using AI -->
+            <a href="https://drive.google.com/file/d/1Jy37DH5H0VSoTQLMtsFqkWARwWWG-ueL/view" target="_blank"
+               class="cert-card">
+                <i class="fas fa-robot"></i>
+                <h3>Python Using AI</h3>
+                <p>AI Techies — Python for Artificial Intelligence Applications</p>
+            </a>
+
         </div>
     </div>
 </section>
 
 
+<!-- ── CONTACT ── -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p>I'm actively looking for Generative AI / Python Developer opportunities. Whether you have a project idea, a role to discuss, or just want to say hi — feel free to reach out!</p>
 
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p><a href="mailto:ankitagupta7488@gmail.com">ankitagupta7488@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p><a href="tel:+6207718405">+91 6207718405</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Ranchi, Jharkhand, India</p>
-                            </div>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:ankitagupta7488@gmail.com">ankitagupta7488@gmail.com</a></p>
                         </div>
                     </div>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/ankita-gupta-699363229/" target="_blank" class="social-btn" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Ankitagupta7" target="_blank" class="social-btn" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ankitagupta7488@gmail.com" 
-                         class="social-btn" target="_blank" title="Email">
-                           <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://www.instagram.com/dollyak15/" target="_blank" class="social-btn" title="Instagram">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+916207718405">+91 6207718405</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bangalore, India</p>
+                        </div>
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" class="form-textarea" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <p class="form-message" id="formMessage"></p>
-                </form>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ankita-gupta-699363229/" target="_blank" class="social-btn" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Ankitagupta7" target="_blank" class="social-btn" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ankitagupta7488@gmail.com"
+                       class="social-btn" target="_blank" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dollyak15/" target="_blank" class="social-btn" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Ankita Gupta. All rights reserved.</p>
-            <p>Designed with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" class="form-textarea" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p class="form-message" id="formMessage"></p>
+            </form>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Ankita Gupta. All rights reserved.</p>
+        <p>Generative AI Developer · Python · LLM · RAG · LangChain</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
